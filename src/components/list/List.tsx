@@ -1,6 +1,6 @@
 import TaskLists from "@/model/TaskLists"
 import ItemList from "./ItemList"
-import ButtonList from "./ButtonList"
+import FooterList from "./FooterList"
 
 interface ListProps {
     tasks: TaskLists
@@ -28,18 +28,19 @@ export default function List(props: ListProps) {
     }
     return (
         <div className={`
-            flex w-3/5
+            flex w-3/5 items-start relative
         `}>
             <ul className={`
+                absolute -top-16
                 w-full list-none
                 bg-white shadow-lg rounded-lg
             `}>
                 {renderTasks()}
-                <li className="p-5">
-                    <ButtonList selected={true} onClick={() => {}}>
-                    Todas
-                    </ButtonList>
-                </li>
+
+                <FooterList 
+                    tasks={props.tasks}
+                    changed={props.changed}
+                />
             </ul>
         </div>
     )
