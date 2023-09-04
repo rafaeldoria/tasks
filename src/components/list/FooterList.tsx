@@ -69,7 +69,7 @@ export default function FooterList(props: FooterListProps){
     }
     
     return (
-        <li className={`flex p-5 bg-img-todo`}>
+        <li className={`flex p-5`}>
             {renderTotalItems()}
             {renderFilterButtons()}
             {renderDelete()}

@@ -31,7 +31,7 @@ export default function List(props: ListProps) {
             flex w-3/5 items-start relative
         `}>
             <ul className={`
-                absolute -top-16
+                absolute -top-12
                 w-full list-none
                 bg-white shadow-lg rounded-lg
             `}>
